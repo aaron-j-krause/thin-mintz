@@ -4,25 +4,30 @@
 	<meta charset="UTF-8">
   <meta name="viewport" content="width=device-width">
   <link rel="shortcut icon" type="image/x-icon" href="./favicon.ico">
-	<title>THIN MINTSSSS CALORIES</title>
+	<title>Thin Mints Calorie Calculator</title>
 	<link rel="stylesheet" href="./vendor/skeleton/normalize.css">
 	<link rel="stylesheet" href="./vendor/skeleton/skeleton.css">
 	<link rel="stylesheet" href="./style.css">
 </head>
 <body>
 	<div class="container">
-		<h1>HOW MANY THIN MINTS DID YOU EARN???</h1>
-		<form id="damn-calories">
+		<main class="clearfix">
+			<h1>HOW MANY THIN MINTS DID YOUR WORKOUT BURN?</h1>
+			<form id="calories">
+				<div class="row">
+					<input class="six columns offset-by-three" name="cal" type="number" placeholder="Calories Burned">
+				</div>
+				<div class="row">
+					<button class="four columns offset-by-four" type="submit">CALCULATE</button>
+				</div>
+			</form>
 			<div class="row">
-				<input class="six columns offset-by-three" name="cal" type="number" placeholder="Calories Burned">
+				<h2 id="results" class="eight columns offset-by-two"></h2>
 			</div>
-			<div class="row">
-				<button class="four columns offset-by-four" type="submit">CALCULATE</button>
-			</div>
-		</form>
-		<div class="row">
-			<h2 id="results" class="eight columns offset-by-two"></h2>
-		</div>
+		</main>
+		<footer>
+			By <a href="http://github.com/aaroncrows">Aaron</a>
+		</footer>
 	</div>
 	<script src="app.js"></script>
 </body>

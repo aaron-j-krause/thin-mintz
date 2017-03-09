@@ -1,32 +1,31 @@
 ;(function(){
   "use strict";
-  var damnForm = document.getElementById('damn-calories');
-  var fuckinResults = document.getElementById('results');
+  var form = document.getElementById('calories');
+  var results = document.getElementById('results');
   // calorie count from Googling "calories in a thin mint"
-  // possibly completely wrong I don't care
   var calPerServing = 161;
-  var cookiezPer = 4;
-  var mintCalz = calPerServing / cookiezPer;
+  var cookiesPer = 4;
+  var mintCals = calPerServing / cookiesPer;
 
-  damnForm.addEventListener('submit', function(e) {
+  form.addEventListener('submit', function(e) {
     e.preventDefault();
 
     var cal = e.target.cal;
-    var thinMintsss = cal.value / mintCalz;
+    var thinMints = cal.value / mintCals;
     var plural;
     var msg;
     // nearest half
-    thinMintsss = Math.round(thinMintsss * 2) / 2;
-    plural = thinMintsss === 1 ? '' : 's'
+    thinMints = Math.round(thinMints * 2) / 2;
+    plural = thinMints === 1 ? '' : 's'
 
-    if (cal.value < mintCalz) {
+    if (cal.value < mintCals) {
       msg = 'Not even one. Get back to work.';
     } else if (cal.value > 2000) {
-      msg = thinMintsss + ' cookies! Pretty sure you\'re lying tho.';
+      msg = thinMints + ' cookies! I\'m pretty sure you\'re lying though.';
     } else {
-      msg = thinMintsss + '! ' + thinMintsss + ' damn cookie' + plural + '!';
+      msg = 'You can eat ' + thinMints + ' cookie' + plural + ' and break even!';
     }
-    fuckinResults.textContent = msg
+    results.textContent = msg
     cal.value = '';
   })
 })();

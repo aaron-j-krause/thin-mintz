@@ -8,8 +8,24 @@ body {
 }
 
 .container {
+  padding: 30px 0;
   background-color: rgba(152, 255, 152, 0.7);
   height: 100%;
+  min-height: 400px;
+}
+a {
+  color: #6f6;
+}
+a:hover {
+  color: #FF0;
+}
+main {
+  height: 95%;
+}
+
+footer {
+  height: 5%;
+  text-align: center;
 }
 
 input:focus {
@@ -29,4 +45,9 @@ input[type=number] {
   text-align: center
 }
 
+.clearfix:after {
+  display: table;
+  content: " ";
+  clear: both;
+}
 
