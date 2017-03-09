@@ -1,6 +1,32 @@
-h1 {
+html, body {
+  height: 100%
+}
+
+body {
+  background-image: url("img/thinmint.jpg");
+  background-size: 60px;
+}
+
+.container {
+  background-color: rgba(152, 255, 152, 0.7);
+  height: 100%;
+}
+
+input:focus {
+  outline: 1px solid rgb(152, 255, 152);
+}
+
+button {
+  color: #000;
+  font-size: 15px;
+  border: 2px solid black;
+}
+
+h1, h2 {
   text-align: center;
 }
 input[type=number] {
   text-align: center
 }
+
+
